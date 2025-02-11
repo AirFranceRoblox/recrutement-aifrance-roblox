@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Level Examination</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #000033;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .fr-en {
+            text-align: right;
+            font-size: 1.1em;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .options input[type="radio"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .btn {
+            background-color: #002654;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+        .btn:hover {
+            background-color: #1c72e3;
+        }
+        .footer {
+            text-align: center;
+            font-size: 1em;
+            color: #555;
+            margin-top: 30px;
+        }
+        .High {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1000px;
+            height: auto;
+            margin-bottom: 0px;
+        }
+        .High img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="High">
+            <img src="https://cdn.discordapp.com/attachments/1330524865136033833/1337912455455576155/backgound.png?ex=67a92b92&is=67a7da12&hm=10ef44aeac3fee7aa7771957e554f16ec303a8ae1c1db10f33dbaf8ccf2bb7ae&">
+        </div>
+
+        <div class="header">
+            <h1>Ramp Agent H/F/X</h1>
+            <div class="fr-en">FR | EN</div>
+        </div>
+
+        <div class="section">
+            <h2>English level examination</h2>
+            <p>This English examination will determine your actual level of English proficiency. You will have 10 minutes to complete this examination and score above 90.</p>
+            <p>The usage of Translation Device or any Artificial Intelligence are strictly forbidden.</p>
+        </div>
+
+        <div class="section">
+            <h2>Error and correction</h2>
+
+            <div class="question">
+                <p>Which sentence is correct?</p>
+                <ul class="options">
+                    <li><input type="radio" name="q11" id="q11a" value="a"><label for="q11a">She don’t like coffee.</label></li>
+                    <li><input type="radio" name="q11" id="q11b" value="b"><label for="q11b">She doesn’t likes coffee.</label></li>
+                    <li><input type="radio" name="q11" id="q11c" value="c"><label for="q11c">She doesn’t like coffee.</label></li>
+                    <li><input type="radio" name="q11" id="q11d" value="d"><label for="q11d">She not like coffee.</label></li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <p>Which sentence is correct?</p>
+                <ul class="options">
+                    <li><input type="radio" name="q12" id="q12a" value="a"><label for="q12a">They have been working here since five years.</label></li>
+                    <li><input type="radio" name="q12" id="q12b" value="b"><label for="q12b">They have been working here for five years.</label></li>
+                    <li><input type="radio" name="q12" id="q12c" value="c"><label for="q12c">They have been working here since five years ago.</label></li>
+                    <li><input type="radio" name="q12" id="q12d" value="d"><label for="q12d">They have been working here from five years.</label></li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <p>Which sentence is correct?</p>
+                <ul class="options">
+                    <li><input type="radio" name="q13" id="q13a" value="a"><label for="q13a">The report was wrote by John.</label></li>
+                    <li><input type="radio" name="q13" id="q13b" value="b"><label for="q13b">The report was written by John.</label></li>
+                    <li><input type="radio" name="q13" id="q13c" value="c"><label for="q13c">The report was writed by John.</label></li>
+                    <li><input type="radio" name="q13" id="q13d" value="d"><label for="q13d">The report was writing by John.</label></li>
+                </ul>
+            </div>
+
+            <div class="question">
+                <p>Which sentence is correct?</p>
+                <ul class="options">
+                    <li><input type="radio" name="q14" id="q14a" value="a"><label for="q14a">He is used to wake up early.</label></li>
+                    <li><input type="radio" name="q14" id="q14b" value="b"><label for="q14b">He is used to waking up early.</label></li>
+                    <li><input type="radio" name="q14" id="q14c" value="c"><label for="q14c">He is used to woke up early.</label></li>
+                    <li><input type="radio" name="q14" id="q14d" value="d"><label for="q14d">He is used to wakes up early.</label></li>
+                </ul>
+            </div>
+
+            <script>
+                // Save answers to local storage when selected
+                document.querySelectorAll('input[type="radio"]').forEach(radio => {
+                    radio.addEventListener('change', function() {
+                        const questionName = radio.name;
+                        const selectedValue = radio.value;
+                        localStorage.setItem(questionName, selectedValue);
+                    });
+                });
+        
+                // Load saved answers from local storage
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.querySelectorAll('input[type="radio"]').forEach(radio => {
+                        const questionName = radio.name;
+                        const savedValue = localStorage.getItem(questionName);
+                        if (savedValue) {
+                            radio.checked = (radio.value === savedValue);
+                        }
+                    });
+                });
+            </script>
+
+        <div class="btn-container">
+            <a href="Result/ResultRampAgent.html">
+            <button class="btn" id="continueBtn" onclick="validateForm()">Continue</button>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>This website is dedicated to recruiting crew members for a VIRTUAL AIR FRANCE operating on the ROBLOX platform. Please note that this site is not affiliated with or connected to the official AIR FRANCE Careers website in any way.</p>
+        </div>
+    </div>
+
+</body>
+</html>
