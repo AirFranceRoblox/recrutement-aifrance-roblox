@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .brand-header {
+            width: 120%;
+            background: linear-gradient(90deg, #001847 0%, #003366 100%);
+            padding: 10px;
+        }
+        .brand-header img {
+            height: 60px;
+            width: 900px;
+        }
+        .header {
+            background-color: #000033;
+            color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .form-content {
+            padding: 20px 40px 40px 40px;
+        }
+        .question {
+            margin-bottom: 25px;
+        }
+        .radio-group {
+            margin-top: 10px;
+        }
+        .radio-option {
+            margin-right: 20px;
+        }
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+        .language-level label {
+            margin-right: 20px;
+        }
+        input[type="text"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100px;
+        }
+        .fr-en {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: rgb(0, 0, 0);
+        }
+
+        .apply-btn {
+            background-color: #002654;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            left: 64%;
+            top: 123%;
+        }
+        .apply-btn:hover {
+            background-color: #1c72e3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="brand-header">
+            <img src="https://media.discordapp.net/attachments/1330524865136033833/1337912455455576155/backgound.png?ex=67ab25d2&is=67a9d452&hm=f17cbefbef0e8a55d47fc0bcb778721528590435c9ffce5060496d06d1ac6c8a&=&format=webp&quality=lossless&width=1440&height=107" alt="Air France Roblox">
+        </div>
+
+        <div class="header">
+            <h1>Cabin Crew with CCA H/F/X</h1>
+            <div class="fr-en">FR | EN</div>
+        </div>
+
+        <div class="form-content">
+            <div class="question">
+                <label>Are you at least 14 years old at the time of application?</label>
+                <div class="radio-group">
+                    <label class="radio-option"><input type="radio" name="age" value="yes"> Yes</label>
+                    <label class="radio-option"><input type="radio" name="age" value="no"> No</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>Have you ever got a cabin crew training (CCA) in any other airlines?</label>
+                <div class="radio-group">
+                    <label class="radio-option"><input type="radio" name="CCA in other Airline" value="yes"> Yes</label>
+                    <label class="radio-option"><input type="radio" name="CCA in other Airline" value="no"> No</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>Are you familiar with the safety equipment locations on board our aircrafts?</label>
+                <div class="radio-group">
+                    <label class="radio-option"><input type="radio" name="familiar with equipements" value="yes"> Yes</label>
+                    <label class="radio-option"><input type="radio" name="familiar with equipements" value="no"> No</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>Which device are you using to work?</label>
+                <div class="radio-group">
+                    <label class="radio-option"><input type="radio" name="device" value="pc"> PC</label>
+                    <label class="radio-option"><input type="radio" name="device" value="phone">Phone</label>
+                    <label class="radio-option"><input type="radio" name="device" value="playstation">Console</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>What is your level of French?</label>
+                <div class="radio-group">
+                    <label class="radio-option"><input type="radio" name="french" value="beginner"> Beginner</label>
+                    <label class="radio-option"><input type="radio" name="french" value="intermediate"> Intermediate</label>
+                    <label class="radio-option"><input type="radio" name="french" value="fluent"> Fluent</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>What is your level of English?</label>
+                <div class="radio-group">
+                    <label class="radio-option"><input type="radio" name="english" value="beginner"> Beginner</label>
+                    <label class="radio-option"><input type="radio" name="english" value="intermediate"> Intermediate</label>
+                    <label class="radio-option"><input type="radio" name="english" value="fluent"> Fluent</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>In which time zone do you live?</label>
+                <div class="radio-group">
+                    <input type="text" placeholder="UTC+1">
+                </div>
+            </div>
+
+            <div class="question">
+                <label>Are you available to attend training sessions and meetings?</label>
+                <div class="radio-group">
+                    <label class="radio-option"><input type="radio" name="free for training Session" value="yes"> Yes</label>
+                    <label class="radio-option"><input type="radio" name="free for training Session" value="no"> No</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>Are you able to keep up with a growing flying quota per month?</label>
+                <div class="radio-group">
+                    <label class="radio-option"><input type="radio" name="keep up a flight quota" value="yes"> Yes</label>
+                    <label class="radio-option"><input type="radio" name="keep up a flight quota" value="no"> No</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>Are you comfortable using voice communication (e.g., Discord) for coordination during flights?</label>
+                <div class="radio-group">
+                    <label class="radio-option"><input type="radio" name="voice chat" value="yes"> Yes</label>
+                    <label class="radio-option"><input type="radio" name="voice chat" value="no"> No</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>Are you willing to commit to a long-term role as Cabin Crew?</label>
+                <div class="radio-group">
+                    <label class="radio-option"><input type="radio" name="long-therm Cabin Crew" value="yes"> Yes</label>
+                    <label class="radio-option"><input type="radio" name="long-therm Cabin Crew" value="no"> No</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label>Are you interested in taking on leadership roles within the airline in the future (e.g., IFS, Cabin Crew Trainer)?</label>
+                <div class="radio-group">
+                    <label class="radio-option"><input type="radio" name="Upgrade Roles in the future" value="yes"> Yes</label>
+                    <label class="radio-option"><input type="radio" name="Upgrade Roles in the future" value="no"> No</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="English test/Cabin Crew/EnglishCC.html" onclick="return validateForm();">
+        <button class="apply-btn">Continue</button>
+    </a>
+
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    function validateForm(event) {
+        event.preventDefault(); // Empêche la soumission immédiate
+
+        let isValid = true;
+        const responses = {};
+        const radioGroups = ['age', 'CCA in other Airline', 'familiar with equipements', 'device', 'french', 'english', 'free for training Session', 'keep up a flight quota', 'voice chat', 'long-therm Cabin Crew', 'Upgrade Roles in the future'];
+
+        for (const group of radioGroups) {
+            const selected = document.querySelector(`input[name="${group}"]:checked`);
+            if (!selected) {
+                alert(`Please select an option for: ${group}`);
+                isValid = false;
+            } else {
+                responses[group] = selected.value;
+            }
+        }
+
+        // Vérifier le fuseau horaire
+        const timezoneInput = document.querySelector('input[type="text"]').value.trim();
+        const timezonePattern = /^UTC[+-]\d{1,2}$/;
+        if (!timezoneInput || !timezonePattern.test(timezoneInput)) {
+            alert('Please enter a valid format like UTC+1 or UTC-5, without spaces.');
+            isValid = false;
+        } else {
+            responses["timezone"] = timezoneInput;
+        }
+
+        // Vérifier avant l'envoi
+        if (!isValid) return;
+
+        // Récupérer le nom d'utilisateur enregistré
+        const username = localStorage.getItem("username") || "Unknown User";
+
+        // Construire l'embed Discord
+        const embed = {
+            username: "Application Bot",
+            embeds: [{
+                title: "New Application Cabin Crew with CCA",
+                color: 0xFF0000, // Couleur bleue
+                fields: [
+                    { name: "Username", value: username, inline: true },
+                    { name: "Timezone", value: responses["timezone"], inline: true },
+                    ...Object.entries(responses).map(([key, value]) => ({
+                        name: key.charAt(0).toUpperCase() + key.slice(1),
+                        value: value,
+                        inline: true
+                    }))
+                ]
+            }]
+        };
+
+        // Envoyer au webhook Discord
+        sendToDiscord(embed);
+    }
+
+    function sendToDiscord(embed) {
+        const webhookUrl = 'https://discord.com/api/webhooks/1334615279895969865/gZtwQvbIFWwAeUYlG4dL0bGXAk3sjpbItb8kfIBbJkzFO2gJTDcIp5-Tt6QS-YVPmY7B';
+
+        fetch(webhookUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(embed),
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Responses sent successfully!');
+                window.location.href = "English test/Cabin Crew/EnglishCC.html"; // Redirection après envoi
+            } else {
+                throw new Error('Failed to send responses.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Failed to send responses. Please try again.');
+        });
+    }
+
+    // Associer la validation au bouton "Continue"
+    document.querySelector('.apply-btn').addEventListener('click', validateForm);
+});
+
+    </script>
+    
+</body>
+</html>
