@@ -77,6 +77,15 @@
             color: #555;
             margin-top: 30px;
         }
+
+        .reset-container {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            margin-top: -123px;
+            left: 67%;
+        }
+
         .High {
             display: flex;
             justify-content: center;
@@ -94,7 +103,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Cabin Crew with CCA H/F/X</h1>
+            <h1>Commercial Pilot Airbus A330 H/F/X</h1>
             <div class="fr-en">FR | EN</div>
         </div>
 
@@ -164,8 +173,10 @@
     </div>
 
     <div class="btn-container">
-        <button class="btn" id="resetBtn" onclick="resetForm()">Reset</button>
-        <a href="English test/Cabin Crew/EnglishCC3.html">
+        <div class="reset-container">
+            <button class="btn" id="resetBtn" onclick="resetForm()">Reset</button>
+        </div>        
+        <a href="English3.html">
             <button class="btn" id="continueBtn">Continue</button>
         </a>
     </div>

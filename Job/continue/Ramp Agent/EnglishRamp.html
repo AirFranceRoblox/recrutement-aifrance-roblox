@@ -90,11 +90,11 @@
 <body>
     <div class="container">
         <div class="High">
-            <img src="https://cdn.discordapp.com/attachments/1330524865136033833/1337912455455576155/backgound.png?ex=67a92b92&is=67a7da12&hm=10ef44aeac3fee7aa7771957e554f16ec303a8ae1c1db10f33dbaf8ccf2bb7ae&">
+            <img src="https://media.discordapp.net/attachments/1330524865136033833/1337912455455576155/backgound.png?ex=67ab25d2&is=67a9d452&hm=f17cbefbef0e8a55d47fc0bcb778721528590435c9ffce5060496d06d1ac6c8a&=&format=webp&quality=lossless&width=1440&height=107">
         </div>
 
         <div class="header">
-            <h1>Cabin Crew H/F/X</h1>
+            <h1>Ramp Agent H/F/X</h1>
             <div class="fr-en">FR | EN</div>
         </div>
 
@@ -159,7 +159,7 @@
 
         <div class="btn-container">
             <button class="btn" id="resetBtn" onclick="resetForm()">Reset</button>
-            <a href="English test/Cabin Crew/EnglishCC2.html">
+            <a href="EnglishRamp2.html">
             <button class="btn" id="continueBtn" onclick="validateForm()">Continue</button>
             </a>
         </div>
@@ -168,6 +168,34 @@
             <p>This website is dedicated to recruiting crew members for a VIRTUAL AIR FRANCE operating on the ROBLOX platform. Please note that this site is not affiliated with or connected to the official AIR FRANCE Careers website in any way.</p>
         </div>
     </div>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault(); // Empêche la redirection immédiate
+    
+            let isValid = true;
+            const questions = document.querySelectorAll('.question');
+    
+            questions.forEach(question => {
+                const radios = question.querySelectorAll('input[type="radio"]');
+                const isChecked = Array.from(radios).some(radio => radio.checked);
+    
+                if (!isChecked) {
+                    isValid = false;
+                }
+            });
+    
+            if (!isValid) {
+                alert("Please answer all the questions before continuing.");
+            } else {
+                window.location.href = "English test/Ramp Agent/EnglishRamp2.html";
+            }
+        }
+    
+        // Appliquer la validation sur le bouton "Continue"
+        document.getElementById('continueBtn').addEventListener('click', validateForm);
+    </script>
+    
 
     <script>
         // Save answers to local storage when selected
