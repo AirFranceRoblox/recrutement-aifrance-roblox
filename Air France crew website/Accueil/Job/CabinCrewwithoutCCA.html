@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cabin Crew Application</title>
+<style>
+body {
+    font-family: sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scrollbar-width: 10px;
+    scroll-padding: 10px;
+}
+
+html, body {
+    height: 110%;
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+}
+
+.banner img {
+    width: 60%;
+    height: auto;
+    max-width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 90%;
+    border-radius: 18px;
+    margin-top: 20px;
+    align-items: center;
+    z-index: 2;
+    max-height: 70vh; /* Adjusted for more scroll space */
+    overflow-y: auto;
+    color: #051039;
+}
+
+
+.left-section {
+    width: 45%;
+    padding: 20px;
+    color: #051039;
+}
+
+.right-section {
+    width: 45%;
+    background-color: #051039;
+    color: #fff;
+    padding: 20px;
+    border-radius: 18px;
+}
+
+h1 {
+    color: #051039;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #051039;
+    margin-bottom: 5px;
+}
+
+.job-description {
+    margin-top: 10px;
+    color: #051039;
+}
+
+.requirements {
+    margin-top: 10px;
+    color: #051039;
+}
+
+.requirements ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="text"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: black;
+}
+
+.gender-birthday {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gender-birthday > div {
+    width: 48%;
+}
+
+.Nils {
+    display: flex;
+    position: absolute;
+    bottom: -190px;
+    top: 120%;
+    left: 4%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(216, 216, 216);
+    padding: 10px;
+    opacity: 0.1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.Nils:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+button {
+    background-color: #ffffff;
+    color: #051039;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #c2c2c2;
+}
+
+.confirmation-group {
+    margin-top: 15px;
+}
+
+.confirmation-group label {
+    font-weight: normal;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.apply-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.apply-button button {
+    padding: 15px 30px;
+    font-size: 18px;
+}
+
+.disclaimer {
+    text-align: center;
+    padding: 0px;
+    color: #051039;
+    width: 60%;
+    height: 10%;
+    margin-top: 80px;
+    box-sizing: border-box;
+}
+
+.bloc-couleur {
+    background-color: #c2c2c2;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    color: #051039;
+    position: absolute;
+    top: calc(100% + 20px); /* Décale la zone grise vers le bas */
+    padding-top: 65px; /* Ajoute de l'espace par le haut */
+    position: absolute;
+    top: 100%;
+}
+
+
+
+.img {
+    position: absolute;
+    top: 103%;
+    left: 45%;
+    width: 160px !important;
+    height: 150px;
+    height: auto; 
+    align-items: center;
+}
+
+.img2 {
+    position: absolute;
+    top: 103%;
+    left: 50%;
+
+
+
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.footer img {
+    width: 50px;
+    height: auto;
+    margin: 0 10px;
+}
+
+.footer img[src*="https://media.discordapp.net/attachments/1330524865136033833/1337392455850524723/AF-web-logo.png?ex=67a74749&is=67a5f5c9&hm=432cc662be119d35d39837957679856fcf34dee37b836804ccfe1d8fcfced2fe&=&format=webp&quality=lossless"] {
+    width: 400px;
+    filter: drop-shadow(0 0 0 black);
+    size: 100px;
+    position: absolute;
+    align-items: center;
+    left: 34%;
+    top: 83%
+}
+
+.footer img[src*="https://cdn.discordapp.com/attachments/1330524865136033833/1337390460909522975/discord-icon-svgrepo-com-1.png?ex=67a7456d&is=67a5f3ed&hm=55235ff988bf78c72297fd15a33a2a37a7951585418de985c182cb62a0146f82&"] {
+    width: 100px;
+    filter: drop-shadow(0 0 0 black);
+    size: 100px;
+    top: 80%;
+    left: 57%;
+    position: absolute;
+}
+</style>
+</head>
+<body>
+
+<div class="banner">
+    <img src="https://media.discordapp.net/attachments/1330524865136033833/1337755424161529866/Capture_decran_2025-02-06_173500.png?ex=67a89953&is=67a747d3&hm=b42d454ed117c8707dabd929736dc0fedf7b4a632175cc4e881c4127d976de62&=&format=webp&quality=lossless">
+</div>
+
+<div class="container">
+
+    <div class="left-section">
+        <h1>Cabin Crew without CCA H/F/X</h1>
+        <p>Paris-Charles de Gaulle</p>
+
+        <h2>Job</h2>
+        <p>Personnel Navigant Commercial - Steward / Hôtesse de l’air </p>
+
+        <h2>Job description</h2>
+        <p class="job-description">
+            A cabin crew member is a demanding profession that requires a true passion for aviation, enthusiasm, and dedication, as well as strong interpersonal, psychological, and physical skills. It also requires proficiency in English.
+        </p>
+        <p>
+            Cabin crew members are responsible for ensuring passenger safety, comfort, and well-being throughout the flight. Their duties include safety demonstrations, emergency procedures, customer service, and effective communication with both passengers and the flight crew. Cabin crew roles are divided into three categories: Cabin Manager (Chef de Cabine), Cabin Crew Member (Hôtesse de l’air/Steward) and PCB (Personnel Complémentaire de Bord).
+        </p>
+
+        <h2>Requirements</h2>
+        <div class="requirements">
+            <ul>
+                <li>Be at least 14 years old at the time of application.</li>
+                <li>be able to complete an initial Cabin Crew training (CCA).</li>
+                <li>Proficiency in English and scoring a score of 90 at the English Exam.</li>
+                <li>Able to fulfill the flight quota per month.</li>
+                <li>Not working at another Air France.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="right-section">
+        <form id="applicationForm">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="abc@gmail.com">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Surname, Name</label>
+                <input type="text" id="name" name="name" placeholder="MARTIN, Maëlys-Gaëlle">
+            </div>
+
+            <div class="form-group">
+                <label for="username">Discord Username</label>
+                <input type="text" id="username" name="username" placeholder="username">
+            </div>
+
+            <div class="gender-birthday">
+                <div class="form-group">
+                    <label>Gender</label><br>
+                    <input type="text" style="width: 50px" value=""  placeholder="M/W">
+                </div>
+
+                <div class="form-group">
+                    <label for="birthday">Birthday</label>
+                    <input type="text" id="birthday" name="birthday" placeholder="DD/MM/AAAA">
+                </div>
+            </div>
+
+            <div class="confirmation-group">
+                <label><input type="radio" name="discord_confirm"> I confirm I have joined the AIR FRANCE discord server</label>
+            </div>
+
+            <div class="confirmation-group">
+                <label><input type="radio" name="roblox_confirm"> I confirm I have joined the AIR FRANCE Roblox group</label>
+            </div>
+
+            <div class="confirmation-group">
+                <label><input type="radio" name="terms_confirm"> I confirm that all the information provided above is accurate and truthful. I understand that any false or incorrect details will result in the automatic rejection of my application.</label>
+            </div>
+
+            <div class="apply-button">
+                <button type="submit">Apply</button>
+            </div>
+            
+        </form>
+    </div>
+
+</div>
+
+<div class="bloc-couleur">
+    <ul>
+        <li> This website is dedicated to recruiting crew members for a VIRTUAL AIR FRANCE operating on the ROBLOX platform.
+        <li>  Please note that this site is not affiliated or connected to the official AIR FRANCE Careers website in any way.
+    </ul>
+
+</div>
+
+<div class="Nils">
+    <h1>A Nils production 👀</h1>
+        petit easter egg haha
+</div>
+
+<div class="img">
+    <a href="https://www.roblox.com/communities/32953458/AF-AirFrance#!/about" target="_blank">
+    <img src="/Accueil/Job/roblox 1 (1).svg" alt="logo roblox">
+    </a>
+
+</div>
+
+<div class="img2">
+     <a href="https://discord.com/invite/air-france" target="_blank">
+     <img src="/Accueil/Job/discord-icon-svgrepo-com 1 (4).svg" alt="logo discord">
+     </a>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    function validateForm(event) {
+        event.preventDefault(); // Empêche la soumission classique du formulaire
+
+        let isValid = true;
+        const form = document.getElementById('applicationForm');
+
+        // Récupération des champs
+        const email = document.getElementById('email').value.trim();
+        const name = document.getElementById('name').value.trim();
+        const username = document.getElementById('username').value.trim();
+        const gender = form.querySelector('input[placeholder="M/W"]').value.trim();
+        const birthday = document.getElementById('birthday').value.trim();
+
+        // ✅ Stocke le nom d'utilisateur dans localStorage
+        localStorage.setItem("username", username);
+
+        // Validation des champs
+        if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+            alert("Veuillez entrer un email valide.");
+            isValid = false;
+        }
+
+        if (!name.includes(',')) {
+            alert("Veuillez entrer votre nom sous la forme 'Nom, Prénom'.");
+            isValid = false;
+        }
+
+        if (!username) {
+            alert("Veuillez entrer votre nom d'utilisateur Discord.");
+            isValid = false;
+        }
+
+        if (!birthday) {
+            alert("Veuillez entrer votre date de naissance.");
+            isValid = false;
+        }
+
+        // Vérification des confirmations
+        const checkboxes = ['discord_confirm', 'roblox_confirm', 'terms_confirm'];
+        checkboxes.forEach(checkbox => {
+            if (!form.querySelector(`input[name="${checkbox}"]`).checked) {
+                alert(`Vous devez confirmer : ${checkbox.replace('_', ' ')}`);
+                isValid = false;
+            }
+        });
+
+        // ✅ Rediriger uniquement si le formulaire est valide
+        if (isValid) {
+            window.location.href = "/Accueil/Continue button/y_CCwithoutCCA.html";
+        }
+    }
+
+    // 🔥 Attache l'événement au formulaire
+    document.getElementById('applicationForm').addEventListener('submit', validateForm);
+});
+
+</script>
+
+
+
+</body>
+</html>
+
